@@ -1,0 +1,21 @@
+# Traffic-to-OpenAPI Synthesizer (`api-synthesizer`)
+
+A smart local mitmproxy addon that listens to your manual web browser interactions and automatically synthesizes a fully typed OpenAPI 3.0 YAML specification.
+
+## Usage
+
+1. Install requirements:
+```bash
+pip install -r requirements.txt
+```
+
+2. Start mitmproxy with the synthesizer addon:
+```bash
+mitmdump -s proxy.py
+```
+
+3. Configure your local browser proxy settings to point to `127.0.0.1:8080`.
+
+4. Browse your target web application. As you perform fetch/XHR calls, the addon automatically parameterizes path IDs and infers request/response JSON schemas.
+
+5. Press `Ctrl+C` to stop mitmproxy. The full OpenAPI specification will be saved to `generated_openapi.yaml`.
