@@ -1,13 +1,5 @@
 # Traffic-to-OpenAPI Synthesizer (`api-synthesizer`)
 
-![GitHub License](https://img.shields.io/github/license/sohan-a11y/api-synthesizer?style=flat-square)
-![GitHub Last Commit](https://img.shields.io/github/last-commit/sohan-a11y/api-synthesizer?style=flat-square)
-![GitHub Stars](https://img.shields.io/github/stars/sohan-a11y/api-synthesizer?style=flat-square)
-![GitHub Forks](https://img.shields.io/github/forks/sohan-a11y/api-synthesizer?style=flat-square)
-
-[![Skills](https://skillicons.dev/icons?i=python,fastapi,git)](https://skillicons.dev)
-
-
 A smart local mitmproxy addon that listens to your manual web browser interactions and automatically synthesizes a fully typed OpenAPI 3.0 YAML specification.
 
 ## Usage
