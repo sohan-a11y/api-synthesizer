@@ -1,5 +1,12 @@
 # Traffic-to-OpenAPI Synthesizer (`api-synthesizer`)
 
+![GitHub License](https://img.shields.io/github/license/sohan-a11y/api-synthesizer?style=flat-square)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/sohan-a11y/api-synthesizer?style=flat-square)
+![GitHub Stars](https://img.shields.io/github/stars/sohan-a11y/api-synthesizer?style=flat-square)
+
+[![Skills](https://skillicons.dev/icons?i=python,fastapi,git)](https://skillicons.dev)
+
+
 A smart local mitmproxy addon that listens to your manual web browser interactions and automatically synthesizes a fully typed OpenAPI 3.0 YAML specification.
 
 ## Usage
@@ -19,3 +26,14 @@ mitmdump -s proxy.py
 4. Browse your target web application. As you perform fetch/XHR calls, the addon automatically parameterizes path IDs and infers request/response JSON schemas.
 
 5. Press `Ctrl+C` to stop mitmproxy. The full OpenAPI specification will be saved to `generated_openapi.yaml`.
+
+
+---
+
+<div align="center">
+
+**Built by [M Sai Sohan (@sohan-a11y)](https://github.com/sohan-a11y)**
+
+*If you find this project useful, please consider giving it a ⭐ on GitHub!*
+
+</div>
