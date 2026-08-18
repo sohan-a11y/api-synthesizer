@@ -1,72 +1,29 @@
-# Traffic-to-OpenAPI Synthesizer ⚡
+# Traffic-to-OpenAPI Synthesizer (`api-synthesizer`)
 
 ![GitHub License](https://img.shields.io/github/license/sohan-a11y/api-synthesizer?style=flat-square)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/sohan-a11y/api-synthesizer?style=flat-square)
 ![GitHub Stars](https://img.shields.io/github/stars/sohan-a11y/api-synthesizer?style=flat-square)
 ![GitHub Forks](https://img.shields.io/github/forks/sohan-a11y/api-synthesizer?style=flat-square)
 
-
-Traffic-to-OpenAPI Synthesizer: Automatic path parameterization and JSON schema inference from live HTTP traffic.
-
----
-
-## 🌟 Key Features
-
-- ⚡ **Real-time Traffic Sniffing**: Integrated mitmproxy addon captures HTTP/HTTPS requests on the fly.
-- 🧩 **Dynamic Schema Inference**: Automatically extracts request/response JSON structures and types.
-- 🛣️ **Path Parameterization**: Identifies RESTful path IDs (`/users/123` -> `/users/{id}`).
-- 📄 **OpenAPI 3.0 Generation**: Outputs valid YAML/JSON OpenAPI specifications instantly.
-
----
-
-## 🛠️ Tech Stack
-
 [![Skills](https://skillicons.dev/icons?i=python,fastapi,git)](https://skillicons.dev)
 
----
 
-## 🚀 Quick Start
+A smart local mitmproxy addon that listens to your manual web browser interactions and automatically synthesizes a fully typed OpenAPI 3.0 YAML specification.
 
-### Prerequisites
-- Python 3.9+ / Node.js (depending on module)
-- Git
+## Usage
 
-### Installation
+1. Install requirements:
 ```bash
-# Clone repository
-git clone https://github.com/sohan-a11y/api-synthesizer.git
-cd api-synthesizer
-
-# Install dependencies (if python project)
 pip install -r requirements.txt
 ```
 
----
-
-## 💡 Usage Example
-
+2. Start mitmproxy with the synthesizer addon:
 ```bash
-# Run application entrypoint
-python main.py
+mitmdump -s proxy.py
 ```
 
----
+3. Configure your local browser proxy settings to point to `127.0.0.1:8080`.
 
-## 🗺️ Roadmap & Future Enhancements
-- [x] Initial release & core functionality
-- [ ] Enterprise security integration
-- [ ] Multi-tenant Cloud deployment support
-- [ ] Advanced performance profiling
+4. Browse your target web application. As you perform fetch/XHR calls, the addon automatically parameterizes path IDs and infers request/response JSON schemas.
 
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!  
-Feel free to check the [issues page](https://github.com/sohan-a11y/api-synthesizer/issues).
-
----
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for details.
+5. Press `Ctrl+C` to stop mitmproxy. The full OpenAPI specification will be saved to `generated_openapi.yaml`.
